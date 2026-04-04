@@ -1,0 +1,21 @@
+{
+  "name": "Uwami Mgxekwa Portfolio",
+  "short_name": "Uwami",
+  "description": "Portfolio of Senior Java Developer & IT Lecturer Uwami Mgxekwa",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6366f1",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

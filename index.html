@@ -1,508 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uwami Mgxekwa</title>
-    <!--CSS Files-->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/color.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!--Style Switcher-->
-    <link rel="stylesheet" href="css/color 1.css" class="alternate-style" title="color-1" disabled>
-    <link rel="stylesheet" href="css/color 2.css" class="alternate-style" title="color-2" disabled>
-    <link rel="stylesheet" href="css/color 3.css" class="alternate-style" title="color-3" disabled>
-    <link rel="stylesheet" href="css/color 4.css" class="alternate-style" title="color-4" disabled>
-    <link rel="stylesheet" href="css/color 5.css" class="alternate-style" title="color-5" disabled>
-    <link rel="stylesheet" href="css/style-switcher.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uwami Mgxekwa | Creative Developer & Designer</title>
+  <meta name="description"
+    content="Portfolio of Uwami Mgxekwa - Senior Java Developer, IT Lecturer, and Founder of Brelinx.com." />
+  
+  <!-- Mobile & Browser Optimization -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#6366f1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Modern Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Devicon for professional tech icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+  <!-- Lucide icons for UI -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init("VNaptzurXMluqfUZq");
+    })();
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Theme Initialization -->
+  <script>
+    (function () {
+      const getTheme = () => {
+        if (localStorage.getItem('theme')) return localStorage.getItem('theme');
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      };
+      const theme = getTheme();
+      if (theme === 'dark') document.documentElement.classList.add('dark');
+      else document.documentElement.classList.add('light');
+    })();
+  </script>
 </head>
+
 <body>
-    <!--Main Container Start-->
-    <div class="main-container">
-        <!--Aside Start-->
-        <div class="aside">
-            <div class="logo">
-            <a href="#"><span>U</span>wami</a>
-        </div>
-        <div class="nav-toggler">
-            <span></span>
-        </div>
-        <ul class="nav">
-            <li><a href="#home" class="active"><i class="fa fa-home"></i>Home</a></li>
-            <li><a href="#about"><i class="fa fa-user"></i>About</a></li>
-            <li><a href="#services"><i class="fa fa-list"></i>Services</a></li>
-            <li><a href="#portfolio"><i class="fa fa-driefcase"></i>Portfolio</a></li>
-            <li><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li>
-        </ul>
-        </div>
-        <!--Aside End-->
-        <!--Main Content Start-->
-        <div class="main-content">
-            <!--Home Section Start-->
-            <section class="home section" id="home">
-                <div class="container">
-                    <div class="row">
-                        <div class="home-info padd-15">
-                            <h3 class="hello">Hello, my name is <span class="name">Uwami Mgxekwa</span></h3>
-                            <h3 class="my-profession">I ' m a <span class="typing">developer</span></h3>
-                            <p>I'm a developer loacted in South Africa. I have worked with a lot of companies and helping people or businesses bring their wedsite ideas into live.</p>
-                            <a href="#contact" class="btn hire-me">Hire me</a>
-                        </div>
-                        <div class="home-img padd-15">
-                            <img src="images/SOLUTION.gif" alt="">
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--Home Section End-->
-            <!--About Section Start-->
-            <section class="about section" id="about">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2>About Me</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="about-content padd-15">
-                            <div class="row">
-                                <div class="about-text padd-15">
-                                    <h3>I am Uwami Mgxekwa a <span>Java Developer</span></h3>
-                                    <p>I am a Java developer living/based in South Africa, but I also work remotely and  I am aslo not blindsided for travels,
-                                        business and more oppotunites. I have a certificate in IT:System developmnt and software maintence. i am currently 
-                                        doing a internship for ORACLE here in South Africa. I would realy like to work with you if you are looking for a Java Developer. I am ready when you are!.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="personal-info padd-15">
-                                    <div class="row">
-                                        <div class="info-item padd-15">
-                                            <p>Languages : <span>JAVA, WEB DEV, SQL</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Level : <span>Junior</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Website : <span>https://uwami-mgxekwa.github.io/UwamiMgxekwa.github.io/</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Email : <span>uwamimcdonald@gmail.com</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Degree : <span>IT:System Development</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Phone : <span>+27 63 572 2080</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>City : <span>Johannessburg</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Availability : <span>Available</span></p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="buttons padd-15">
-                                            <a href="C:\Users\user\Desktop\PORTFOLIO\Resume-CV\Uwami Mgxekwa's CV.pdf" class="btn">Download CV</a>
-                                            <a href="#contact" class="btn hire-me">Hire Me</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="skills padd-15">
-                                    <div class="row">
-                                        <div class="skill-item padd-15">
-                                            <h5>DART</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 76%;"></div>
-                                                <div class="skill-percent">76%</div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <h5>JAVA</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 86%;"></div>
-                                                <div class="skill-percent">86%</div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <h5>C++</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 66%;"></div>
-                                                <div class="skill-percent">66%</div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <h5>SQL</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 96%;"></div>
-                                                <div class="skill-percent">96%</div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <h5>JS</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 46%;"></div>
-                                                <div class="skill-percent">46%</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="education padd-15">
-                                    <h3 class="title">Education</h3>
-                                    <div class="row">
-                                        <div class="timeline-box padd-15">
-                                            <div class="timeline shadow-dark">
-                                                <!--timelne item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> 2020 - 2023
-                                                    </h3>
-                                                    <h4 class="timeline-title">IT: SYSTEM DEVELOPMENT</h4>
-                                                    <p class="timeline-text">I attended my first two tertairy schooling years at Gauteng City College and aquired my certificate in It System Development 
-                                                        and also Hardware and Software maintence. I have created websites for many local and intermidate firms and businesses
-                                                        i am currently just became a freelancer because i left my old job for a change. I am looking for newer oppotunities and to work
-                                                        with more people and try new things.</p>
-                                                </div>
-                                                     <!--timelne item-->
-                                                     <div class="timeline-item">
-                                                        <div class="circle-dot"></div>
-                                                        <h3 class="timeline-date">
-                                                            <i class="fa fa-calendar"></i> 2017 - 2021
-                                                        </h3>
-                                                        <h4 class="timeline-title">SECONDARY SCHOOL</h4>
-                                                        <p class="timeline-text">
-                                                            I studied at Sir John Adamson highscool and during my time i had choosen to study a module called CAT(Computer Application Technology)
-                                                        in this module we were thought computer terminologies and functions . I had learnt the skeleton(Structure) of a website and its in and outs
-                                                        i am currently a freelancer because i just left my old job because i am looking for more oppotunities and to work
-                                                        i was insipired by the coding classes and that is where my journey in coding start I took very large interest in it
-                                                        and in 2020 i finally come to a final conculsion that coding is what i want to do.</p>
-                                                    </div>
-                                                         <!--timelne item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> 2009 - 2016
-                                                    </h3>
-                                                    <h4 class="timeline-title">PRIMARY SCHOOL</h4>
-                                                    <p class="timeline-text">I studied at Forest Hill Primary School and finsihed my Primary Education phase there 
-                                                        During my time as a primary school student i learnt very basic skills like reading and writing . I believe this makes it much
-                                                        easier for me to communicate with other people in my work place . And make group work very productive and effcient
-                                                    we were given some lessons on behavioural control and how to talk and work with people.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="experience [add-15]">
-                                    <h3 class="title">Experience</h3>
-                                    <div class="row">
-                                        <div class="timeline-box padd-15">
-                                            <div class="timeline shadow-dark">
-                                                <!--timelne item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> 2022 - 2023
-                                                    </h3>
-                                                    <h4 class="timeline-title">PROJECT MANAGER</h4>
-                                                    <p class="timeline-text">As a Web Developer for my perious job we worked as a team and i was the project manager
-                                                        i was given this position because of my cirtical and decicisive thinking. i was responsibale for hosting team meetings and 
-                                                        and telling every member of the team about what was new and what we are expected to complete. With the whole experience
-                                                         i gain massive amounts of knowledge and skill. With these newly aquired skills i was able to work under pressure and ensure 
-                                                         that my team memebers were all on the same page and not left behind or felt forgotten. This is why i think i will make a perfect 
-                                                        employee and with traits of a hardworker.</p>
-                                                </div>
-                                                     <!--timelne item-->
-                                                     <div class="timeline-item">
-                                                        <div class="circle-dot"></div>
-                                                        <h3 class="timeline-date">
-                                                            <i class="fa fa-calendar"></i> 2022 - 2023
-                                                        </h3>
-                                                        <h4 class="timeline-title">WEB DEVELOPER</h4>
-                                                        <p class="timeline-text">I studied in Gauteng City College and aquired mty certificate in It System Development 
-                                                            and also Hardware and Software maintence. I have created websites for many local and intermidate firms and businesses
-                                                            i am currently a freelancer because i just left my old job because i am looking for more oppotunities and to work
-                                                            with more people and try new things.</p>
-                                                    </div>
-                                                         <!--timelne item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> 2019 - 2021
-                                                    </h3>
-                                                    <h4 class="timeline-title">CAT: COMPUTER APPLICATION TECHNOLOGY</h4>
-                                                    <p class="timeline-text">I completed 3 years of CAT (Computer Application Technology) in highscool and and finsihed on a  
-                                                        high note with excellent grades and great achivemnets. I have created websites in html only because we were introductory level 
-                                                        I completed projects and assigments with mininum duration of not more than a year at max .In these annual assignments
-                                                        i was expected to cover almost everything there is to a computer and importance of a computer in this mordern era. AI is the future. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--About Section End-->
-             <!--Services Section Start-->
-             <section class="service section" id="services">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2>Services</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!--Service item Start-->
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-laptop-code"></i>
-                                </div>
-                                <h4>Web Developer</h4>
-                                <p>I am a Web Developer with 4 years experince and paractically work</p>
-                            </div>
-                        </div>
-                        <!--Service item End-->
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-mobile-alt "></i>
-                                </div>
-                                <h4>Blog Writter</h4>
-                                <p>I am a Blog Writter with 2 years experince and paractically work</p>
-                            </div>
-                        </div>
-                        <!--Service item End-->
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-palette"></i>
-                                </div>
-                                <h4>Java Developer</h4>
-                                <p>I am a Java Developer with 2 years experince and paractically work</p>
-                            </div>
-                        </div>
-                        <!--Service item End-->
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-code"></i>
-                                </div>
-                                <h4>Python Developer</h4>
-                                <p>I am a Python Developer with 3 years experince amd paractically work</p>
-                            </div>
-                        </div>
-                        <!--Service item End-->
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-search"></i>
-                                </div>
-                                <h4>SQL Developer</h4>
-                                <p>I am a SQL Developer with 2 years experince amd paractically work</p>
-                            </div>
-                        </div>
-                        <!--Service item End-->
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-bullhorn"></i>
-                                </div>
-                                <h4>EXCEL Database Manager</h4>
-                                <p>I am a Excel Database Manager with 4 years experince amd paractically work</p>
-                            </div>
-                        </div>
-                        <!--Service item End-->
-                    </div>
-                </div>
-             </section>
-             <!--Services Section End-->
-             <!--Portfolio Section Start-->
-             <section class="portfolio section" id="portfolio">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2>Portfolio</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="portfolio-heading padd-15">
-                            <h2>My Last Projects :</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!--portfolio item start-->
-                        <div class="portfolio-item padd-15">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <img src="images/capture.PNG" alt="" href="lastprojects/Building a Strong Company Culture.docx">
-                                </div>
-                            </div>
-                        </div>
-                        <!--portfolio item end-->
-                         <!--portfolio item start-->
-                         <div class="portfolio-item padd-15">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <img src="images/captur1.PNG" alt="" href="lastprojects/ELECTROHOME.html">
-                                </div>
-                            </div>
-                        </div>
-                        <!--portfolio item end-->
-                         <!--portfolio item start-->
-                         <div class="portfolio-item padd-15">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <img src="images/capture3.PNG" alt="" href="lastprojects/first html.html">
-                                </div>
-                            </div>
-                        </div>
-                        <!--portfolio item end-->
-                         <!--portfolio item start-->
-                         <div class="portfolio-item padd-15">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <img src="images/capture4.PNG" alt="" href="lastprojects/LOADING ANIMATION.html">
-                                </div>
-                            </div>
-                        </div>
-                        <!--portfolio item end-->
-                         <!--portfolio item start-->
-                         <div class="portfolio-item padd-15">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <img src="images/capture5.PNG" alt="" href="lastprojects/main.cpp">
-                                </div>
-                            </div>
-                        </div>
-                        <!--portfolio item end-->
-                        <!--portfolio item start-->
-                        <div class="portfolio-item padd-15">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <img src="images/capture6.PNG" alt="" href="lastprojects/Warehouse_Manager.xlsm">
-                                </div>
-                            </div>
-                        </div>
-                        <!--portfolio item end-->                        
-                    </div>
-                </div>
-             </section>
-             <!--Portfolio Section End-->
-             <!--Contact Section Start-->
-            <section class="contact section" id="contact">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2>Contact Me</h2>
-                        </div>
-                    </div>
-                    <h3 class="contact-title padd-15">Do you have any questions ?</h3>
-                <h4 class="contact-sub-title padd-15">I AM AT YOUR SERVICE !</h4>
-                <div class="row">
-                    <!--Contact info item start-->
-                    <div class="contact-info-item padd-15">
-                        <div class="icon"><i class="fa fa-phone"></i></div>
-                        <h4>Call me on </h4>
-                        <p>+27 635722080</p>
-                    </div>
-                    <!--Contact info item end-->
-                     <!--Contact info item start-->
-                     <div class="contact-info-item padd-15">
-                        <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
-                        <h4>Office</h4>
-                        <p>ByteBlitz Technologies</p>
-                    </div>
-                    <!--Contact info item end-->
-                     <!--Contact info item start-->
-                     <div class="contact-info-item padd-15">
-                        <div class="icon"><i class="fa fa-envelope"></i></div>
-                        <h4>Email</h4>
-                        <p>uwamimcdonald@gmail.com</p>
-                    </div>
-                    <!--Contact info item end-->
-                     <!--Contact info item start-->
-                     <div class="contact-info-item padd-15">
-                        <div class="icon"><i class="fa fa-globe-europe"></i></div>
-                        <h4>Website</h4>
-                        <p>https://uwami-mgxekwa.github.io/UwamiMgxekwa.github.io/</p>
-                    </div>
-                    <!--Contact info item end-->
-                </div>
-                <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
-                <h4 class="contact-sub-title padd-15">I WILL RRSPOND AS QUICK AS I CAN !</h4>
-                <!--Contact Form-->
-                <div class="row">
-                    <div class="contact-form padd-15">
-                        <div class="row">
-                            <div class="form-item col-6 padd-15">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Name">
-                                </div>
-                            </div>
-                            <div class="form-item col-6 padd-15">
-                                <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Email">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-item col-12 padd-15">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Subject">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-item col-12 padd-15">
-                                <div class="form-group">
-                                    <textarea name="" class="form-control" id="" placeholder="Message"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-item col-12 padd-15">
-                               <button type="submit" class="btn">Send Message</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-            </section>
-             <!--Contact Section End-->
-        </div>
-        <!--Main Content End-->
+  <!-- Navigation bar -->
+  <nav id="navbar">
+    <div class="logo">
+      <img src="uwami-logo.png" alt="Uwami Mgxekwa Logo">
     </div>
-    <!--Main Container End-->
-    <!--Style switcher Start-->
-    <div class="style-switcher">
-        <div class="style-switcher-toggler s-icon">
-            <i class="fas fa-cog fa-spin"></i>
-        </div>
-        <div class="day-night s-icon">
-            <i class="fas "></i>
-        </div>
-        <h4>Theme Colors</h4>
-        <div class="colors">
-            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
-            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
-            <span class="color-3" onclick="setActiveStyle('color-3')"></span>
-            <span class="color-4" onclick="setActiveStyle('color-4')"></span>
-            <span class="color-5" onclick="setActiveStyle('color-5')"></span>
-        </div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <!-- Theme Toggle Switch -->
+      <label class="switch">
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider round">
+          <i data-lucide="sun" class="sun-icon"></i>
+          <i data-lucide="moon" class="moon-icon"></i>
+        </span>
+      </label>
+      <a href="#contact" class="btn primary small">Hire Me</a>
     </div>
-     <!--Style switcher End-->
-    <!--JS Files-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
-    <script src="js/script.js"></script>
-    <script src="js/style-switcher.js"></script>
+  </nav>
+
+  <!-- Background Shapes -->
+  <div class="blob" style="top: 10%; left: 0;"></div>
+  <div class="blob"
+    style="top: 60%; right: 0; left: auto; background: linear-gradient(135deg, rgba(236, 72, 153, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%);">
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <div class="reveal active">
+      <span class="badge">Founder of Brelinx.com</span>
+      <h1>Uwami Mgxekwa</h1>
+      <p>Senior Java Developer & IT Lecturer with 5+ years of experience. Founder of <b>brelinx.com</b>, a leading IT &
+        Software Services provider.</p>
+      <div style="margin-top: 1.5rem;">
+        <a href="https://github.com/Uwami-Mgxekwa" target="_blank">
+          <img src="https://user-badge.committers.top/south_africa/Uwami-Mgxekwa.svg" alt="Uwami Ranking"
+            style="border-radius: 8px;">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="reveal">
+      <div class="section-header">
+        <h2>About Me</h2>
+        <p>I think Tech is Fun .</p>
+      </div>
+      <div class="about-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div class="text-content">
+          <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--text-secondary);">
+            I am a dedicated <b>Senior Java Developer</b> and <b>IT Lecturer</b> with over 5 years of industry
+            experience. As
+            the founder of <b>brelinx.com</b>, I lead a mission-driven IT and Software company that provides
+            cutting-edge
+            digital services and innovative solutions.
+          </p>
+          <p style="font-size: 1.1rem; color: var(--text-secondary);">
+            My dual role as a developer and an educator allows me to stay at the forefront of technology while mentoring
+            the next generation of engineers. I specialize in architecting scalable systems and fostering technical
+            excellence across multiple domains.
+          </p>
+        </div>
+        <div class="about-image" style="width: 100%; aspect-ratio: 1;">
+          <img src="me.jpeg" alt="Creative Tech Design"
+            style="width: 100%; height: 100%; object-fit: cover; border-radius: 2rem; border: 1px solid var(--glass-border); box-shadow: var(--shadow);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="reveal">
+      <div class="section-header">
+        <h2>GitHub Activity</h2>
+        <p>Showcasing a fraction of my 94+ repositories and continuous contributions.</p>
+      </div>
+      <div class="projects-grid" id="github-repos">
+        <!-- Repos will be dynamically loaded here or fallback to a link -->
+        <div class="loading">Loading repositories...</div>
+      </div>
+      <div style="text-align: center; margin-top: 4rem;">
+        <a href="https://github.com/Uwami-Mgxekwa" target="_blank" class="btn outline">Explore All 94 Repositories</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="reveal">
+      <div class="section-header" style="text-align: center;">
+        <h2>Superpowers</h2>
+        <p>A deep stack for scalable systems and teaching the next generation of coders.</p>
+      </div>
+      <div class="skills-grid">
+        <!-- Java Group -->
+        <div class="skill-card">
+          <i class="devicon-java-plain colored"></i>
+          <h4>Java Ecosystem</h4>
+          <p>Spring Boot, Swing, JavaFX</p>
+        </div>
+        <!-- C++ Group -->
+        <div class="skill-card">
+          <i class="devicon-cplusplus-plain colored"></i>
+          <h4>C++</h4>
+          <p>Low-level performance</p>
+        </div>
+        <!-- Web Technologies -->
+        <div class="skill-card">
+          <i class="devicon-javascript-plain colored"></i>
+          <h4>Web Tech</h4>
+          <p>Modern Frontend & APIs</p>
+        </div>
+        <!-- SQL Group -->
+        <div class="skill-card">
+          <i class="devicon-mysql-plain colored"></i>
+          <h4>SQL & Data</h4>
+          <p>Relational Databases</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platforms Section -->
+  <section id="platforms">
+    <div class="reveal">
+      <div class="section-header" style="text-align: center;">
+        <h2>Platforms I Work With</h2>
+        <p>Enterprise platforms and cloud providers I utilize for scalable infrastructure.</p>
+      </div>
+      <div class="platform-grid">
+        <!-- Google Cloud -->
+        <div class="platform-card">
+          <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-ar21.svg" alt="Google Cloud"
+            style="width: auto; height: 65px;">
+          <span>Google Cloud</span>
+        </div>
+        <!-- Microsoft -->
+        <div class="platform-card">
+          <img src="https://www.vectorlogo.zone/logos/microsoft/microsoft-ar21.svg" alt="Microsoft"
+            style="width: auto; height: 65px;">
+          <span>Microsoft</span>
+        </div>
+        <!-- Microsoft Azure -->
+        <div class="platform-card">
+          <img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-ar21.svg" alt="Microsoft Azure"
+            style="width: auto; height: 65px;">
+          <span>Microsoft Azure</span>
+        </div>
+        <!-- AWS -->
+        <div class="platform-card">
+          <img src="https://www.vectorlogo.zone/logos/amazon/amazon-ar21.svg" alt="AWS"
+            style="width: auto; height: 65px;">
+          <span>AWS</span>
+        </div>
+        <!-- Google -->
+        <div class="platform-card">
+          <img src="https://www.vectorlogo.zone/logos/google/google-ar21.svg" alt="Google"
+            style="width: auto; height: 65px;">
+          <span>Google</span>
+        </div>
+        <!-- Oracle -->
+        <div class="platform-card">
+          <img src="https://www.vectorlogo.zone/logos/oracle/oracle-ar21.svg" alt="Oracle"
+            style="width: auto; height: 50px;">
+          <span>Oracle</span>
+        </div>
+        <!-- IBM -->
+        <div class="platform-card">
+          <img src="https://www.vectorlogo.zone/logos/ibm/ibm-ar21.svg" alt="IBM" style="width: auto; height: 50px;">
+          <span>IBM</span>
+        </div>
+        <!-- SAP -->
+        <div class="platform-card">
+          <img src="https://www.vectorlogo.zone/logos/sap/sap-ar21.svg" alt="SAP" style="width: auto; height: 65px;">
+          <span>SAP</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="reveal">
+      <div class="section-header">
+        <h2>Get in Touch</h2>
+        <p>Looking for a Senior Developer or IT Lecturer? Let's discuss your next project.</p>
+      </div>
+      <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: start;">
+        <div class="contact-info">
+          <div class="info-item">
+            <i data-lucide="mail"></i>
+            <div>
+              <h4>Email</h4>
+              <p>uwamimgxekwa@gmail.com</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i data-lucide="phone"></i>
+            <div>
+              <h4>WhatsApp</h4>
+              <p>+27 63 572 2080</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i data-lucide="map-pin"></i>
+            <div>
+              <h4>Location</h4>
+              <p>Johannesburg, South Africa</p>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Alex Rivers" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="alex@rivers.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="+27 78 500 2274" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="How can I help you today?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" id="submitBtn" style="width: 100%;">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-loading" style="display: none;">Sending... <i data-lucide="loader-2" class="spin"></i></span>
+          </button>
+          <div id="formStatus" style="margin-top: 1rem; border-radius: 0.5rem; padding: 1rem; display: none; font-size: 0.9rem;"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="padding: 4rem 2rem; border-top: 1px solid var(--glass-border); text-align: center;">
+    <div style="margin-bottom: 2rem;">
+      <img src="uwami-logo.png" alt="Uwami Logo" style="max-height: 50px; opacity: 0.8;">
+    </div>
+    <p style="color: var(--text-secondary);">&copy; <span id="currentYear">2026</span> Uwami Mgxekwa. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
