@@ -70,12 +70,21 @@ html {
   transition: var(--theme-transition);
 }
 
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+  touch-action: pan-y;
+  overscroll-behavior: none;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-primary);
   line-height: 1.6;
-  overflow-x: hidden;
   transition: var(--theme-transition);
 }
 
@@ -225,6 +234,21 @@ section {
   margin: 0 auto;
 }
 
+.about-grid, .contact-grid {
+  display: grid;
+  gap: 4rem;
+}
+
+.about-grid {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.contact-grid {
+  grid-template-columns: 1fr 1.5fr;
+  align-items: start;
+}
+
 /* Custom Cursor (Optional but cool) */
 .cursor {
   width: 20px;
@@ -241,6 +265,7 @@ section {
 /* Hero Section */
 .hero {
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -251,6 +276,8 @@ section {
   background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.6)), url('hero-bg.png');
   background-size: cover;
   background-position: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Removed the glass/transparent background as per user preference */
@@ -259,11 +286,12 @@ section {
 }
 
 .hero .reveal {
-  width: 100%;
   max-width: 900px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -485,7 +513,10 @@ input, textarea {
   background: var(--glass);
   color: var(--text-primary);
   font-family: inherit;
+  font-size: 16px; /* Prevents auto-zoom on iOS focus */
   transition: border-color 0.2s;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 input:focus, textarea:focus {
@@ -549,40 +580,57 @@ input:focus, textarea:focus {
 }
 
 @media (max-width: 768px) {
-  section { padding: 4rem 1.5rem; }
+  section { padding: 4rem 1.5rem; width: 100%; overflow-x: hidden; }
   
   /* Stack all grids to 1 column */
   .about-grid, 
   .skills-grid, 
-  .project-grid, 
+  .projects-grid, 
   .github-grid, 
   .contact-grid,
   .platform-grid {
     grid-template-columns: 1fr !important;
     display: flex !important;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
+    align-items: center; /* Center content on mobile */
+    text-align: center;
   }
   
-  .about-grid > div,
-  .contact-grid > div {
-    grid-column: span 2; /* Force full width if using grid */
+  .about-image {
+    width: 100%;
+    max-width: 400px;
   }
 
-  .text-content { order: 2; }
-  .about-image { order: 1; margin-bottom: 2rem; }
+  .contact-info {
+    text-align: left;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
   
-  .hero h1 { font-size: 2.75rem; letter-spacing: -0.02em; }
-  .hero p { font-size: 1.1rem; }
+  .hero h1 { font-size: clamp(2.5rem, 12vw, 4rem); letter-spacing: -0.02em; }
+  .hero p { font-size: 1.1rem; padding: 0 1rem; }
   
-  .section-header h2 { font-size: 2rem; }
+  .section-header h2 { font-size: 2.25rem; }
   
   nav {
-    flex-direction: column;
-    height: auto;
-    padding: 1.5rem;
-    gap: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    gap: 0;
   }
+
+  .nav-cta a.btn { display: none; } /* Hide 'Hire Me' on small mobile if needed, or keep smaller */
+  .switch { width: 48px; height: 26px; }
+  .slider:before { height: 18px; width: 18px; bottom: 4px; left: 4px; }
+  input:checked + .slider:before { transform: translateX(22px); }
 }
 
 
